@@ -2,20 +2,23 @@ function trocaVencimento() {
     const vencimentoAtual = parseInt(document.getElementById('vencimentoAtual').value)
     const vencimentoNovo = parseInt(document.getElementById('vencimentoNovo').value)
     const valorPlano = parseFloat(document.getElementById('valorPlano').value)
-    const diasMes = 30
-
-    console.log(vencimentoAtual)
-
-    if (vencimentoAtual > vencimentoNovo) {
-        let diasProporcionais = vencimentoNovo - vencimentoAtual
-    } else {
-        let diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
-    }
+    const resultado = document.getElementById('resultado')
 
     let diariaPlano = valorPlano / 30
-    let proporcional = diariaPlano * diasProporcionais
-    let valorTotal = proporcional + valorPlano
 
-    alert(valorTotal)
+    if (vencimentoAtual < vencimentoNovo) {
+        const diasProporcionais = vencimentoNovo - vencimentoAtual
+        let proporcional = diariaPlano * diasProporcionais
+        let valorTotal = proporcional + valorPlano
 
+        resultado.innerHTML = '<p>' + valorTotal + '</p>'
+
+    } else {
+        const diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
+        let proporcional = diariaPlano * diasProporcionais
+        let valorTotal = proporcional + valorPlano
+
+        resultado.innerHTML = '<p>' + valorTotal + '</p>'
+
+    }
 }

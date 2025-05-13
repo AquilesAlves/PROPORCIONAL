@@ -15,14 +15,14 @@
     <input type="number" id="vencimentoNovo" min="1" max="31">
 
     <p>Valor do plano (R$):</p>
-    <input type="number" id="valorPlano">
+    <input type="number" id="valorPlano" step="0.01">
 
-    <div>
-        <button>Calcular</button>  
-    </div>  
+    <button onclick="trocaVencimento()">Calcular</button>  
+ 
 
-    <div class="resultado"></div>
+    <div class="resultado" id="resultado"></div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>

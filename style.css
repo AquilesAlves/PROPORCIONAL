@@ -1,0 +1,20 @@
+body{
+    background-color: grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+
+}
+
+h1{
+    font-size: 28px;
+}
+
+input{
+    width: 60%;
+}

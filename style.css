@@ -10,7 +10,8 @@ body{
     font-size: 20px;
 }
 main{
-    padding: 20px;
+    padding: 30px;
+    padding-bottom: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,10 +51,10 @@ button{
 .resultado{
     background-color: rgb(220, 219, 219);
     color: black;
-    border-radius: 15px;
+    /* border-radius: 15px;
     height: 170px;
     width: 300px;
-    padding: 15px;
+    padding: 15px; */
     display: flex;
     flex-direction: column;
     align-items: center;

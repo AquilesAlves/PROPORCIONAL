@@ -8,13 +8,18 @@ function trocaVencimento() {
 
     if (vencimentoAtual < vencimentoNovo) {
         let diasProporcionais = vencimentoNovo - vencimentoAtual
-        let proporcional = diariaPlano * diasProporcionais
-        let valorTotal = proporcional + valorPlano
+        let proporcional = (diariaPlano * diasProporcionais)
+        let valorTotal = (proporcional + valorPlano)
+
+        resultado.style.borderRadius = "15px"
+        resultado.style.padding = "15px"
+        resultado.style.height = "170px"
+        resultado.style.width = "350px"
 
         resultado.innerHTML = `
-        <p><strong>Dias proporcionais</strong>: ${diasProporcionais}</p>
-        <p><strong>Valor do proporcional</strong>: ${proporcional}</p>
-        <p><strong>Valor da fatura</strong>: ${valorTotal}</p>
+        <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
+        <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
+        <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
         `
 
     } else {
@@ -22,10 +27,15 @@ function trocaVencimento() {
         let proporcional = diariaPlano * diasProporcionais
         let valorTotal = proporcional + valorPlano
 
+        resultado.style.borderRadius = "15px"
+        resultado.style.padding = "15px"
+        resultado.style.height = "170px"
+        resultado.style.width = "350px"
+
         resultado.innerHTML = `
-        <p><strong>Dias proporcionais</strong>: ${diasProporcionais}</p>
-        <p><strong>Valor do proporcional</strong>: ${proporcional}</p>
-        <p><strong>Valor da fatura</strong>: ${valorTotal}</p>
+        <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
+        <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
+        <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
         `
     }
 }

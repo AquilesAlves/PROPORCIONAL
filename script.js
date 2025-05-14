@@ -7,18 +7,25 @@ function trocaVencimento() {
     let diariaPlano = valorPlano / 30
 
     if (vencimentoAtual < vencimentoNovo) {
-        const diasProporcionais = vencimentoNovo - vencimentoAtual
+        let diasProporcionais = vencimentoNovo - vencimentoAtual
         let proporcional = diariaPlano * diasProporcionais
         let valorTotal = proporcional + valorPlano
 
-        resultado.innerHTML = '<p>' + valorTotal + '</p>'
+        resultado.innerHTML = `
+        <p><strong>Dias proporcionais</strong>: ${diasProporcionais}</p>
+        <p><strong>Valor do proporcional</strong>: ${proporcional}</p>
+        <p><strong>Valor da fatura</strong>: ${valorTotal}</p>
+        `
 
     } else {
-        const diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
+        let diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
         let proporcional = diariaPlano * diasProporcionais
         let valorTotal = proporcional + valorPlano
 
-        resultado.innerHTML = '<p>' + valorTotal + '</p>'
-
+        resultado.innerHTML = `
+        <p><strong>Dias proporcionais</strong>: ${diasProporcionais}</p>
+        <p><strong>Valor do proporcional</strong>: ${proporcional}</p>
+        <p><strong>Valor da fatura</strong>: ${valorTotal}</p>
+        `
     }
 }

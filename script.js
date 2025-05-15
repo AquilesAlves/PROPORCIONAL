@@ -6,36 +6,31 @@ function trocaVencimento() {
 
     let diariaPlano = valorPlano / 30
 
+    let diasProporcionais = 0
+    let proporcional = 0
+    let valorTotal = 0
+
     if (vencimentoAtual < vencimentoNovo) {
-        let diasProporcionais = vencimentoNovo - vencimentoAtual
-        let proporcional = (diariaPlano * diasProporcionais)
-        let valorTotal = (proporcional + valorPlano)
+        diasProporcionais = vencimentoNovo - vencimentoAtual
+        proporcional = (diariaPlano * diasProporcionais)
+        valorTotal = (proporcional + valorPlano)
 
-        resultado.style.borderRadius = "15px"
-        resultado.style.padding = "15px"
-        resultado.style.height = "170px"
-        resultado.style.width = "350px"
-
-        resultado.innerHTML = `
-        <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
-        <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
-        <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
-        `
 
     } else {
-        let diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
-        let proporcional = diariaPlano * diasProporcionais
-        let valorTotal = proporcional + valorPlano
-
-        resultado.style.borderRadius = "15px"
-        resultado.style.padding = "15px"
-        resultado.style.height = "170px"
-        resultado.style.width = "350px"
-
-        resultado.innerHTML = `
-        <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
-        <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
-        <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
-        `
+        diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
+        proporcional = diariaPlano * diasProporcionais
+        valorTotal = proporcional + valorPlano
     }
+
+    resultado.style.borderRadius = "15px"
+    resultado.style.padding = "15px"
+    resultado.style.height = "170px"
+    resultado.style.width = "350px"
+
+    
+    resultado.innerHTML = `
+    <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
+    <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
+    <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
+    `
 }

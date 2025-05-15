@@ -29,7 +29,7 @@ function trocaVencimento() {
 
     
     resultado.innerHTML = `
-    <p><strong>Dias proporcionais</strong>: R$  ${diasProporcionais}  </p>
+    <p><strong>Dias proporcionais</strong>:  ${diasProporcionais}  </p>
     <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
     <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
     `

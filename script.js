@@ -13,14 +13,14 @@ function trocaVencimento() {
     if (vencimentoAtual < vencimentoNovo) {
         diasProporcionais = vencimentoNovo - vencimentoAtual
         proporcional = (diariaPlano * diasProporcionais)
-        valorTotal = (proporcional + valorPlano)
-
 
     } else {
         diasProporcionais = (30 - vencimentoAtual) + vencimentoNovo
         proporcional = diariaPlano * diasProporcionais
-        valorTotal = proporcional + valorPlano
+
     }
+
+    valorTotal = proporcional + valorPlano
 
     resultado.style.borderRadius = "15px"
     resultado.style.padding = "15px"
@@ -29,8 +29,8 @@ function trocaVencimento() {
 
     
     resultado.innerHTML = `
-    <p><strong>Dias proporcionais</strong>:  ${diasProporcionais}  </p>
-    <p><strong>Valor do proporcional</strong>: R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
-    <p><strong>Valor da fatura</strong>: R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
+    <p><strong>Dias proporcionais:</strong>  ${diasProporcionais}  </p>
+    <p><strong>Valor do proporcional:</strong> R$  ${(proporcional).toFixed(2).replace('.', ',')}  </p>
+    <p><strong>Valor da fatura:</strong> R$  ${(valorTotal).toFixed(2).replace('.', ',')}  </p>
     `
 }

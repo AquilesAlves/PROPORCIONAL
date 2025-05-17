@@ -48,7 +48,7 @@ button{
 
 }
 
-.resultado{
+.msg{
     background-color: rgb(220, 219, 219);
     color: black;
     display: flex;

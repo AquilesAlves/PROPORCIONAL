@@ -33,7 +33,9 @@ function trocaVencimento() {
     msg1.style.height = "130px"
     msg1.style.width = "350px"
     msg1.innerHTML = `
-        <p>Realizando a troca de vencimento do dia ${vencimentoAtual} para o dia ${vencimentoNovo}, o sistema irá calcular o *proporcional* de ${diasProporcionais} dias, e isso dará o valor de ${valorTotal} para data escolhida, e as próximas faturas voltam para o valor real do seu plano que é ${valorPlano}. Posso seguir com a alteração de vencimento?</p>
+        <p>Realizando a troca de vencimento do dia ${vencimentoAtual} para o dia ${vencimentoNovo}, o sistema irá calcular o *proporcional* de ${diasProporcionais} dias, e 
+        isso dará o valor de R$${valorTotal} para data escolhida, e as próximas faturas voltam para o valor real do seu plano que é R$${valorPlano}. Posso seguir com a 
+        alteração de vencimento?</p>
     `
     document.getElementById('copy1').style.display = 'block'     //faz aparecer o botao
 

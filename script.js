@@ -52,5 +52,13 @@ function trocaVencimento() {
     `
     document.getElementById('copy2').style.display = 'block'
 
+}
+
+function copiar1() {
+    navigator.clipboard.writeText(document.getElementById('msg1').innerText)
+}
+
+function copiar2() {
+    navigator.clipboard.writeText(document.getElementById('msg2').innerText)
 
 }
